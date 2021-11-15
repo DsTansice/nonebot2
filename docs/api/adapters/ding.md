@@ -12,7 +12,7 @@ sidebarDepth: 0
 # NoneBot.adapters.ding.config 模块
 
 
-## _class_ `Config`
+##  _class_ `Config`
 
 钉钉配置类
 
@@ -29,7 +29,7 @@ sidebarDepth: 0
 # NoneBot.adapters.ding.exception 模块
 
 
-## _exception_ `DingAdapterException`
+##  _exception_ `DingAdapterException`
 
 基类：[`nonebot.exception.AdapterException`](../exception.md#nonebot.exception.AdapterException)
 
@@ -40,7 +40,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `ActionFailed`
+##  _exception_ `ActionFailed`
 
 基类：[`nonebot.exception.ActionFailed`](../exception.md#nonebot.exception.ActionFailed), `nonebot.adapters.ding.exception.DingAdapterException`
 
@@ -61,7 +61,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `NetworkError`
+##  _exception_ `NetworkError`
 
 基类：[`nonebot.exception.NetworkError`](../exception.md#nonebot.exception.NetworkError), `nonebot.adapters.ding.exception.DingAdapterException`
 
@@ -79,7 +79,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `SessionExpired`
+##  _exception_ `SessionExpired`
 
 基类：`nonebot.adapters.ding.exception.ApiNotAvailable`, `nonebot.adapters.ding.exception.DingAdapterException`
 
@@ -92,20 +92,20 @@ sidebarDepth: 0
 # NoneBot.adapters.ding.bot 模块
 
 
-## _class_ `Bot`
+##  _class_ `Bot`
 
 基类：[`nonebot.adapters._bot.Bot`](README.md#nonebot.adapters._bot.Bot)
 
 钉钉 协议 Bot 适配。继承属性参考 [BaseBot](./#class-basebot) 。
 
 
-### _property_ `type`
+###  _property_ `type`
 
 
 * 返回: `"ding"`
 
 
-### _async classmethod_ `check_permission(driver, request)`
+###  classmethod _async_ `check_permission(driver, request)`
 
 
 * **说明**
@@ -114,7 +114,7 @@ sidebarDepth: 0
 
 
 
-### _async_ `call_api(api, event=None, **data)`
+###  _async_ `call_api(api, event=None, **data)`
 
 
 * **说明**
@@ -153,7 +153,7 @@ sidebarDepth: 0
 
 
 
-### _async_ `send(event, message, at_sender=False, webhook=None, secret=None, **kwargs)`
+###  _async_ `send(event, message, at_sender=False, webhook=None, secret=None, **kwargs)`
 
 
 * **说明**
@@ -206,24 +206,24 @@ sidebarDepth: 0
 # NoneBot.adapters.ding.message 模块
 
 
-## _class_ `MessageSegment`
+##  _class_ `MessageSegment`
 
 基类：[`nonebot.adapters._message.MessageSegment`](README.md#nonebot.adapters._message.MessageSegment)[`Message`]
 
 钉钉 协议 MessageSegment 适配。具体方法参考协议消息段类型或源码。
 
 
-### _static_ `atAll()`
+###  _static_ `atAll()`
 
 @全体
 
 
-### _static_ `atMobiles(*mobileNumber)`
+###  _static_ `atMobiles(*mobileNumber)`
 
 @指定手机号人员
 
 
-### _static_ `atDingtalkIds(*dingtalkIds)`
+###  _static_ `atDingtalkIds(*dingtalkIds)`
 
 @指定 id，@ 默认会在消息段末尾。
 所以你可以在消息中使用 @{senderId} 占位，发送出去之后 @ 就会出现在占位的位置：
@@ -233,37 +233,37 @@ message += MessageSegment.atDingtalkIds(event.senderId)
 ``
 
 
-### _static_ `text(text)`
+###  _static_ `text(text)`
 
 发送 `text` 类型消息
 
 
-### _static_ `image(picURL)`
+###  _static_ `image(picURL)`
 
 发送 `image` 类型消息
 
 
-### _static_ `extension(dict_)`
+###  _static_ `extension(dict_)`
 
 标记 text 文本的 extension 属性，需要与 text 消息段相加。
 
 
-### _static_ `code(code_language, code)`
+###  _static_ `code(code_language, code)`
 
 发送 code 消息段
 
 
-### _static_ `markdown(title, text)`
+###  _static_ `markdown(title, text)`
 
 发送 `markdown` 类型消息
 
 
-### _static_ `actionCardSingleBtn(title, text, singleTitle, singleURL)`
+###  _static_ `actionCardSingleBtn(title, text, singleTitle, singleURL)`
 
 发送 `actionCardSingleBtn` 类型消息
 
 
-### _static_ `actionCardMultiBtns(title, text, btns, hideAvatar=False, btnOrientation='1')`
+###  _static_ `actionCardMultiBtns(title, text, btns, hideAvatar=False, btnOrientation='1')`
 
 发送 `actionCardMultiBtn` 类型消息
 
@@ -278,7 +278,7 @@ message += MessageSegment.atDingtalkIds(event.senderId)
 
 
 
-### _static_ `feedCard(links)`
+###  _static_ `feedCard(links)`
 
 发送 `feedCard` 类型消息
 
@@ -290,7 +290,7 @@ message += MessageSegment.atDingtalkIds(event.senderId)
 
 
 
-## _class_ `Message`
+##  _class_ `Message`
 
 基类：[`nonebot.adapters._message.Message`](README.md#nonebot.adapters._message.Message)[`nonebot.adapters.ding.message.MessageSegment`]
 
@@ -299,35 +299,35 @@ message += MessageSegment.atDingtalkIds(event.senderId)
 # NoneBot.adapters.ding.event 模块
 
 
-## _class_ `Event`
+##  _class_ `Event`
 
 基类：[`nonebot.adapters._event.Event`](README.md#nonebot.adapters._event.Event)
 
 钉钉协议事件。各事件字段参考 [钉钉文档](https://ding-doc.dingtalk.com/document#/org-dev-guide/elzz1p)
 
 
-## _class_ `ConversationType`
+##  _class_ `ConversationType`
 
 基类：`str`, `enum.Enum`
 
 An enumeration.
 
 
-## _class_ `MessageEvent`
+##  _class_ `MessageEvent`
 
 基类：`nonebot.adapters.ding.event.Event`
 
 消息事件
 
 
-## _class_ `PrivateMessageEvent`
+##  _class_ `PrivateMessageEvent`
 
 基类：`nonebot.adapters.ding.event.MessageEvent`
 
 私聊消息事件
 
 
-## _class_ `GroupMessageEvent`
+##  _class_ `GroupMessageEvent`
 
 基类：`nonebot.adapters.ding.event.MessageEvent`
 

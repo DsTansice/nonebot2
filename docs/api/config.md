@@ -12,7 +12,7 @@ NoneBot 使用 [pydantic](https://pydantic-docs.helpmanual.io/) 以及 [python-d
 配置项需符合特殊格式或 json 序列化格式。详情见 [pydantic Field Type](https://pydantic-docs.helpmanual.io/usage/types/) 文档。
 
 
-## _class_ `Env`
+##  _class_ `Env`
 
 基类：`nonebot.config.BaseConfig`
 
@@ -36,7 +36,7 @@ NoneBot 使用 [pydantic](https://pydantic-docs.helpmanual.io/) 以及 [python-d
 
 
 
-## _class_ `Config`
+##  _class_ `Config`
 
 基类：`nonebot.config.BaseConfig`
 

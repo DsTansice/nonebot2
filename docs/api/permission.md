@@ -14,7 +14,7 @@ sidebarDepth: 0
 :::
 
 
-## _class_ `Permission`
+##  _class_ `Permission`
 
 基类：`object`
 
@@ -62,7 +62,7 @@ Permission(async_function, run_sync(sync_function))
 
 
 
-### _async_ `__call__(bot, event)`
+###  _async_ `__call__(bot, event)`
 
 
 * **说明**

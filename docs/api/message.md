@@ -115,7 +115,7 @@ NoneBot 内部处理并按优先级分发事件给所有事件响应器，提供
 
 
 
-## _async_ `handle_event(bot, event)`
+##  _async_ `handle_event(bot, event)`
 
 
 * **说明**

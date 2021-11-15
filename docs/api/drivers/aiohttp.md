@@ -10,19 +10,19 @@ sidebarDepth: 0
 本驱动仅支持客户端连接
 
 
-## _class_ `Driver`
+##  _class_ `Driver`
 
 基类：[`nonebot.drivers.ForwardDriver`](README.md#nonebot.drivers.ForwardDriver)
 
 AIOHTTP 驱动框架
 
 
-### _property_ `type`
+###  _property_ `type`
 
 驱动名称: `aiohttp`
 
 
-### _property_ `logger`
+###  _property_ `logger`
 
 aiohttp driver 使用的 logger
 
@@ -96,6 +96,6 @@ aiohttp driver 使用的 logger
 启动 aiohttp driver
 
 
-## _class_ `WebSocket`
+##  _class_ `WebSocket`
 
 基类：[`nonebot.drivers.WebSocket`](README.md#nonebot.drivers.WebSocket)

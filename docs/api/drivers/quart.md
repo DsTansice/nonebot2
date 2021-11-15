@@ -10,7 +10,7 @@ sidebarDepth: 0
 后端使用方法请参考: [Quart 文档](https://pgjones.gitlab.io/quart/index.html)
 
 
-## _class_ `Config`
+##  _class_ `Config`
 
 基类：`pydantic.env_settings.BaseSettings`
 
@@ -92,7 +92,7 @@ Quart 驱动框架设置
 
 
 
-## _class_ `Driver`
+##  _class_ `Driver`
 
 基类：[`nonebot.drivers.ReverseDriver`](README.md#nonebot.drivers.ReverseDriver)
 
@@ -109,22 +109,22 @@ Quart 驱动框架
 
 
 
-### _property_ `type`
+###  _property_ `type`
 
 驱动名称: `quart`
 
 
-### _property_ `server_app`
+###  _property_ `server_app`
 
 `Quart` 对象
 
 
-### _property_ `asgi`
+###  _property_ `asgi`
 
 `Quart` 对象
 
 
-### _property_ `logger`
+###  _property_ `logger`
 
 Quart 使用的 logger
 
@@ -144,6 +144,6 @@ Quart 使用的 logger
 使用 `uvicorn` 启动 Quart
 
 
-## _class_ `WebSocket`
+##  _class_ `WebSocket`
 
 基类：[`nonebot.drivers.WebSocket`](README.md#nonebot.drivers.WebSocket)

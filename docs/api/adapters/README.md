@@ -10,7 +10,7 @@ sidebarDepth: 0
 各协议请继承以下基类，并使用 `driver.register_adapter` 注册适配器
 
 
-## _class_ `Bot`
+##  _class_ `Bot`
 
 基类：`abc.ABC`
 
@@ -80,12 +80,12 @@ Config 配置对象
 连接信息
 
 
-### _abstract property_ `type`
+###  property _abstract_ `type`
 
 Adapter 类型
 
 
-### _classmethod_ `register(driver, config, **kwargs)`
+###  _classmethod_ `register(driver, config, **kwargs)`
 
 
 * **说明**
@@ -94,7 +94,7 @@ Adapter 类型
 
 
 
-### _abstract async classmethod_ `check_permission(driver, request)`
+###  async classmethod _abstract_ `check_permission(driver, request)`
 
 
 * **说明**
@@ -123,7 +123,7 @@ Adapter 类型
 
 
 
-### _abstract async_ `handle_message(message)`
+###  async _abstract_ `handle_message(message)`
 
 
 * **说明**
@@ -139,7 +139,7 @@ Adapter 类型
 
 
 
-### _abstract async_ `_call_api(api, **data)`
+###  async _abstract_ `_call_api(api, **data)`
 
 
 * **说明**
@@ -158,7 +158,7 @@ Adapter 类型
 
 
 
-### _async_ `call_api(api, **data)`
+###  _async_ `call_api(api, **data)`
 
 
 * **说明**
@@ -186,7 +186,7 @@ await bot.send_msg(message="hello world")
 ```
 
 
-### _abstract async_ `send(event, message, **kwargs)`
+###  async _abstract_ `send(event, message, **kwargs)`
 
 
 * **说明**
@@ -208,7 +208,7 @@ await bot.send_msg(message="hello world")
 
 
 
-### _classmethod_ `on_calling_api(func)`
+###  _classmethod_ `on_calling_api(func)`
 
 
 * **说明**
@@ -230,7 +230,7 @@ await bot.send_msg(message="hello world")
 
 
 
-### _classmethod_ `on_called_api(func)`
+###  _classmethod_ `on_called_api(func)`
 
 
 * **说明**
@@ -258,7 +258,7 @@ await bot.send_msg(message="hello world")
 
 
 
-## _class_ `MessageSegment`
+##  _class_ `MessageSegment`
 
 基类：`Mapping`, `abc.ABC`, `Generic`[`nonebot.adapters._message.TM`]
 
@@ -283,7 +283,7 @@ await bot.send_msg(message="hello world")
 * 说明: 消息段数据
 
 
-## _class_ `Message`
+##  _class_ `Message`
 
 基类：`List`[`nonebot.adapters._message.TMS`], `abc.ABC`
 
@@ -300,7 +300,7 @@ await bot.send_msg(message="hello world")
 
 
 
-### _classmethod_ `template(format_string)`
+###  _classmethod_ `template(format_string)`
 
 
 * **说明**
@@ -384,14 +384,14 @@ Message(MessageSegment(type='image', data={'file': 'https://...'}))
 
 
 
-## _class_ `Event`
+##  _class_ `Event`
 
 基类：`abc.ABC`, `pydantic.main.BaseModel`
 
 Event 基类。提供获取关键信息的方法，其余信息可直接获取。
 
 
-### _abstract_ `get_type()`
+###  _abstract_ `get_type()`
 
 
 * **说明**
@@ -410,7 +410,7 @@ Event 基类。提供获取关键信息的方法，其余信息可直接获取�
 
 
 
-### _abstract_ `get_event_name()`
+###  _abstract_ `get_event_name()`
 
 
 * **说明**
@@ -426,7 +426,7 @@ Event 基类。提供获取关键信息的方法，其余信息可直接获取�
 
 
 
-### _abstract_ `get_event_description()`
+###  _abstract_ `get_event_description()`
 
 
 * **说明**
@@ -465,7 +465,7 @@ Event 基类。提供获取关键信息的方法，其余信息可直接获取�
 
 
 
-### _abstract_ `get_user_id()`
+###  _abstract_ `get_user_id()`
 
 
 * **说明**
@@ -481,7 +481,7 @@ Event 基类。提供获取关键信息的方法，其余信息可直接获取�
 
 
 
-### _abstract_ `get_session_id()`
+###  _abstract_ `get_session_id()`
 
 
 * **说明**
@@ -497,7 +497,7 @@ Event 基类。提供获取关键信息的方法，其余信息可直接获取�
 
 
 
-### _abstract_ `get_message()`
+###  _abstract_ `get_message()`
 
 
 * **说明**
@@ -529,7 +529,7 @@ Event 基类。提供获取关键信息的方法，其余信息可直接获取�
 
 
 
-### _abstract_ `is_tome()`
+###  _abstract_ `is_tome()`
 
 
 * **说明**
@@ -545,7 +545,7 @@ Event 基类。提供获取关键信息的方法，其余信息可直接获取�
 
 
 
-## _class_ `MessageTemplate`
+##  _class_ `MessageTemplate`
 
 基类：`string.Formatter`, `Generic`[`nonebot.adapters._template.TF`]
 

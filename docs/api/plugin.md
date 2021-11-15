@@ -25,7 +25,7 @@ sidebarDepth: 0
 
 
 
-## _class_ `Plugin`
+##  _class_ `Plugin`
 
 基类：`object`
 
@@ -656,7 +656,7 @@ sidebarDepth: 0
 
 
 
-## _class_ `CommandGroup`
+##  _class_ `CommandGroup`
 
 基类：`object`
 
@@ -746,7 +746,7 @@ sidebarDepth: 0
 
 
 
-## _class_ `MatcherGroup`
+##  _class_ `MatcherGroup`
 
 基类：`object`
 
@@ -1479,7 +1479,7 @@ sidebarDepth: 0
 
 
 
-## _class_ `Export`
+##  _class_ `Export`
 
 基类：`dict`
 

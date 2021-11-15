@@ -10,7 +10,7 @@ sidebarDepth: 0
 各驱动请继承以下基类
 
 
-## _class_ `Driver`
+##  _class_ `Driver`
 
 基类：`abc.ABC`
 
@@ -59,6 +59,21 @@ Driver 基类。
 * **说明**
 
     Bot 连接断开时执行的函数
+
+
+
+### `dependency_overrides`
+
+
+* **类型**
+
+    `Dict[Callable[..., Any], Callable[..., Any]]`
+
+
+
+* **说明**
+
+    Depends 函数的替换表
 
 
 
@@ -120,7 +135,7 @@ Driver 基类。
 
 
 
-### _property_ `bots`
+###  _property_ `bots`
 
 
 * **类型**
@@ -157,17 +172,17 @@ Driver 基类。
 
 
 
-### _abstract property_ `type`
+###  property _abstract_ `type`
 
 驱动类型名称
 
 
-### _abstract property_ `logger`
+###  property _abstract_ `logger`
 
 驱动专属 logger 日志记录器
 
 
-### _abstract_ `run(*args, **kwargs)`
+###  _abstract_ `run(*args, **kwargs)`
 
 
 * **说明**
@@ -186,12 +201,12 @@ Driver 基类。
 
 
 
-### _abstract_ `on_startup(func)`
+###  _abstract_ `on_startup(func)`
 
 注册一个在驱动启动时运行的函数
 
 
-### _abstract_ `on_shutdown(func)`
+###  _abstract_ `on_shutdown(func)`
 
 注册一个在驱动停止时运行的函数
 
@@ -238,14 +253,14 @@ Driver 基类。
 在 WebSocket 连接断开后，调用该函数来注销 bot 对象
 
 
-## _class_ `ForwardDriver`
+##  _class_ `ForwardDriver`
 
 基类：`nonebot.drivers.Driver`
 
 Forward Driver 基类。将客户端框架封装，以满足适配器使用。
 
 
-### _abstract_ `setup_http_polling(setup)`
+###  _abstract_ `setup_http_polling(setup)`
 
 
 * **说明**
@@ -261,7 +276,7 @@ Forward Driver 基类。将客户端框架封装，以满足适配器使用。
 
 
 
-### _abstract_ `setup_websocket(setup)`
+###  _abstract_ `setup_websocket(setup)`
 
 
 * **说明**
@@ -277,24 +292,24 @@ Forward Driver 基类。将客户端框架封装，以满足适配器使用。
 
 
 
-## _class_ `ReverseDriver`
+##  _class_ `ReverseDriver`
 
 基类：`nonebot.drivers.Driver`
 
 Reverse Driver 基类。将后端框架封装，以满足适配器使用。
 
 
-### _abstract property_ `server_app`
+###  property _abstract_ `server_app`
 
 驱动 APP 对象
 
 
-### _abstract property_ `asgi`
+###  property _abstract_ `asgi`
 
 驱动 ASGI 对象
 
 
-## _class_ `HTTPConnection`
+##  _class_ `HTTPConnection`
 
 基类：`abc.ABC`
 
@@ -332,12 +347,12 @@ order of header names is not important.
 Header names must be lowercased.
 
 
-### _abstract property_ `type`
+###  property _abstract_ `type`
 
 Connection type.
 
 
-## _class_ `HTTPRequest`
+##  _class_ `HTTPRequest`
 
 基类：`nonebot.drivers.HTTPConnection`
 
@@ -356,12 +371,12 @@ Body of the request.
 Optional; if missing defaults to `b""`.
 
 
-### _property_ `type`
+###  _property_ `type`
 
 Always `http`
 
 
-## _class_ `HTTPResponse`
+##  _class_ `HTTPResponse`
 
 基类：`object`
 
@@ -392,24 +407,24 @@ Header names must be lowercased.
 Optional; if missing defaults to an empty dict.
 
 
-### _property_ `type`
+###  _property_ `type`
 
 Always `http`
 
 
-## _class_ `WebSocket`
+##  _class_ `WebSocket`
 
 基类：`nonebot.drivers.HTTPConnection`, `abc.ABC`
 
 WebSocket 连接封装。参考 [asgi websocket scope](https://asgi.readthedocs.io/en/latest/specs/www.html#websocket-connection-scope)。
 
 
-### _property_ `type`
+###  _property_ `type`
 
 Always `websocket`
 
 
-### _abstract property_ `closed`
+###  property _abstract_ `closed`
 
 
 * **类型**
@@ -424,37 +439,37 @@ Always `websocket`
 
 
 
-### _abstract async_ `accept()`
+###  async _abstract_ `accept()`
 
 接受 WebSocket 连接请求
 
 
-### _abstract async_ `close(code)`
+###  async _abstract_ `close(code)`
 
 关闭 WebSocket 连接请求
 
 
-### _abstract async_ `receive()`
+###  async _abstract_ `receive()`
 
 接收一条 WebSocket text 信息
 
 
-### _abstract async_ `receive_bytes()`
+###  async _abstract_ `receive_bytes()`
 
 接收一条 WebSocket binary 信息
 
 
-### _abstract async_ `send(data)`
+###  async _abstract_ `send(data)`
 
 发送一条 WebSocket text 信息
 
 
-### _abstract async_ `send_bytes(data)`
+###  async _abstract_ `send_bytes(data)`
 
 发送一条 WebSocket binary 信息
 
 
-## _class_ `HTTPPollingSetup`
+##  _class_ `HTTPPollingSetup`
 
 基类：`object`
 
@@ -499,7 +514,7 @@ HTTP version
 HTTP 轮询间隔
 
 
-## _class_ `WebSocketSetup`
+##  _class_ `WebSocketSetup`
 
 基类：`object`
 

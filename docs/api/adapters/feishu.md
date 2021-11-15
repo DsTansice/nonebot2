@@ -8,7 +8,7 @@ sidebarDepth: 0
 # NoneBot.adapters.feishu.config 模块
 
 
-## _class_ `Config`
+##  _class_ `Config`
 
 飞书配置类
 
@@ -37,7 +37,7 @@ sidebarDepth: 0
 # NoneBot.adapters.feishu.exception 模块
 
 
-## _exception_ `ActionFailed`
+##  _exception_ `ActionFailed`
 
 基类：[`nonebot.exception.ActionFailed`](../exception.md#nonebot.exception.ActionFailed), `nonebot.adapters.feishu.exception.FeishuAdapterException`
 
@@ -55,7 +55,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `NetworkError`
+##  _exception_ `NetworkError`
 
 基类：[`nonebot.exception.NetworkError`](../exception.md#nonebot.exception.NetworkError), `nonebot.adapters.feishu.exception.FeishuAdapterException`
 
@@ -143,14 +143,14 @@ sidebarDepth: 0
 
 
 
-## _class_ `Bot`
+##  _class_ `Bot`
 
 基类：[`nonebot.adapters._bot.Bot`](README.md#nonebot.adapters._bot.Bot)
 
 飞书 协议 Bot 适配。继承属性参考 [BaseBot](./#class-basebot) 。
 
 
-### _async_ `handle_message(message)`
+###  _async_ `handle_message(message)`
 
 
 * **说明**
@@ -159,7 +159,7 @@ sidebarDepth: 0
 
 
 
-### _async_ `call_api(api, **data)`
+###  _async_ `call_api(api, **data)`
 
 
 * **说明**
@@ -197,28 +197,28 @@ sidebarDepth: 0
 # NoneBot.adapters.feishu.message 模块
 
 
-## _class_ `MessageSegment`
+##  _class_ `MessageSegment`
 
 基类：[`nonebot.adapters._message.MessageSegment`](README.md#nonebot.adapters._message.MessageSegment)[`Message`]
 
 飞书 协议 MessageSegment 适配。具体方法参考协议消息段类型或源码。
 
 
-## _class_ `Message`
+##  _class_ `Message`
 
 基类：[`nonebot.adapters._message.Message`](README.md#nonebot.adapters._message.Message)[`nonebot.adapters.feishu.message.MessageSegment`]
 
 飞书 协议 Message 适配。
 
 
-## _class_ `MessageSerializer`
+##  _class_ `MessageSerializer`
 
 基类：`object`
 
 飞书 协议 Message 序列化器。
 
 
-## _class_ `MessageDeserializer`
+##  _class_ `MessageDeserializer`
 
 基类：`object`
 
@@ -227,7 +227,7 @@ sidebarDepth: 0
 # NoneBot.adapters.feishu.event 模块
 
 
-## _class_ `Event`
+##  _class_ `Event`
 
 基类：[`nonebot.adapters._event.Event`](README.md#nonebot.adapters._event.Event)
 

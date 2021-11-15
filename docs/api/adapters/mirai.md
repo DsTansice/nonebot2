@@ -24,7 +24,7 @@ Mirai-API-HTTP 的适配器以 [AGPLv3许可](https://opensource.org/licenses/AG
 # NoneBot.adapters.mirai.config 模块
 
 
-## _class_ `Config`
+##  _class_ `Config`
 
 Mirai 配置类
 
@@ -44,14 +44,14 @@ Mirai 配置类
 # NoneBot.adapters.mirai.bot 模块
 
 
-## _class_ `SessionManager`
+##  _class_ `SessionManager`
 
 基类：`object`
 
 Bot会话管理器, 提供API主动调用接口
 
 
-### _async_ `post(path, *, params=None)`
+###  _async_ `post(path, *, params=None)`
 
 
 * **说明**
@@ -77,7 +77,7 @@ Bot会话管理器, 提供API主动调用接口
 
 
 
-### _async_ `request(path, *, params=None)`
+###  _async_ `request(path, *, params=None)`
 
 
 * **说明**
@@ -96,7 +96,7 @@ Bot会话管理器, 提供API主动调用接口
 
 
 
-### _async_ `upload(path, *, params)`
+###  _async_ `upload(path, *, params)`
 
 
 * **说明**
@@ -115,7 +115,7 @@ Bot会话管理器, 提供API主动调用接口
 
 
 
-## _class_ `Bot`
+##  _class_ `Bot`
 
 基类：[`nonebot.adapters._bot.Bot`](README.md#nonebot.adapters._bot.Bot)
 
@@ -128,12 +128,12 @@ API中为了使代码更加整洁, 我们采用了与PEP8相符的命名规则�
 :::
 
 
-### _property_ `api`
+###  _property_ `api`
 
 返回该Bot对象的会话管理实例以提供API主动调用
 
 
-### _async_ `call_api(api, **data)`
+###  _async_ `call_api(api, **data)`
 
 ::: danger
 由于Mirai的HTTP API特殊性, 该API暂时无法实现
@@ -682,14 +682,14 @@ API中为了使代码更加整洁, 我们采用了与PEP8相符的命名规则�
 # NoneBot.adapters.mirai.message 模块
 
 
-## _class_ `MessageType`
+##  _class_ `MessageType`
 
 基类：`str`, `enum.Enum`
 
 消息类型枚举类
 
 
-## _class_ `MessageSegment`
+##  _class_ `MessageSegment`
 
 基类：[`nonebot.adapters._message.MessageSegment`](README.md#nonebot.adapters._message.MessageSegment)[`MessageChain`]
 
@@ -701,7 +701,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 导出可以被正常json序列化的结构体
 
 
-### _classmethod_ `quote(id, group_id, sender_id, target_id, origin)`
+###  _classmethod_ `quote(id, group_id, sender_id, target_id, origin)`
 
 
 * **说明**
@@ -729,7 +729,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `at(target)`
+###  _classmethod_ `at(target)`
 
 
 * **说明**
@@ -745,7 +745,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `at_all()`
+###  _classmethod_ `at_all()`
 
 
 * **说明**
@@ -754,7 +754,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `face(face_id=None, name=None)`
+###  _classmethod_ `face(face_id=None, name=None)`
 
 
 * **说明**
@@ -773,7 +773,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `plain(text)`
+###  _classmethod_ `plain(text)`
 
 
 * **说明**
@@ -789,7 +789,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `image(image_id=None, url=None, path=None)`
+###  _classmethod_ `image(image_id=None, url=None, path=None)`
 
 
 * **说明**
@@ -811,7 +811,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `flash_image(image_id=None, url=None, path=None)`
+###  _classmethod_ `flash_image(image_id=None, url=None, path=None)`
 
 
 * **说明**
@@ -826,7 +826,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `voice(voice_id=None, url=None, path=None)`
+###  _classmethod_ `voice(voice_id=None, url=None, path=None)`
 
 
 * **说明**
@@ -848,7 +848,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `xml(xml)`
+###  _classmethod_ `xml(xml)`
 
 
 * **说明**
@@ -864,7 +864,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `json(json)`
+###  _classmethod_ `json(json)`
 
 
 * **说明**
@@ -880,7 +880,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `app(content)`
+###  _classmethod_ `app(content)`
 
 
 * **说明**
@@ -896,7 +896,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-### _classmethod_ `poke(name)`
+###  _classmethod_ `poke(name)`
 
 
 * **说明**
@@ -930,7 +930,7 @@ Mirai-API-HTTP 协议 MessageSegment 适配。具体方法参考 [mirai-api-http
 
 
 
-## _class_ `MessageChain`
+##  _class_ `MessageChain`
 
 基类：[`nonebot.adapters._message.Message`](README.md#nonebot.adapters._message.Message)[`nonebot.adapters.mirai.message.MessageSegment`]
 
@@ -962,7 +962,7 @@ Mirai 协议 Message 适配
 # NoneBot.adapters.mirai.utils 模块
 
 
-## _exception_ `ActionFailed`
+##  _exception_ `ActionFailed`
 
 基类：[`nonebot.exception.ActionFailed`](../exception.md#nonebot.exception.ActionFailed)
 
@@ -973,7 +973,7 @@ Mirai 协议 Message 适配
 
 
 
-## _exception_ `InvalidArgument`
+##  _exception_ `InvalidArgument`
 
 基类：[`nonebot.exception.AdapterException`](../exception.md#nonebot.exception.AdapterException)
 
@@ -1018,14 +1018,14 @@ Mirai 协议 Message 适配
 :::
 
 
-## _class_ `Event`
+##  _class_ `Event`
 
 基类：[`nonebot.adapters._event.Event`](README.md#nonebot.adapters._event.Event)
 
 mirai-api-http 协议事件，字段与 mirai-api-http 一致。各事件字段参考 [mirai-api-http 事件类型](https://github.com/project-mirai/mirai-api-http/blob/master/docs/EventType.md)
 
 
-### _classmethod_ `new(data)`
+###  _classmethod_ `new(data)`
 
 此事件类的工厂函数, 能够通过事件数据选择合适的子类进行序列化
 
@@ -1035,7 +1035,7 @@ mirai-api-http 协议事件，字段与 mirai-api-http 一致。各事件字段�
 返回可以被json正常反序列化的结构体
 
 
-## _class_ `UserPermission`
+##  _class_ `UserPermission`
 
 基类：`str`, `enum.Enum`
 
@@ -1055,231 +1055,231 @@ mirai-api-http 协议事件，字段与 mirai-api-http 一致。各事件字段�
 
 
 
-## _class_ `MessageEvent`
+##  _class_ `MessageEvent`
 
 基类：`nonebot.adapters.mirai.event.base.Event`
 
 消息事件基类
 
 
-## _class_ `GroupMessage`
+##  _class_ `GroupMessage`
 
 基类：`nonebot.adapters.mirai.event.message.MessageEvent`
 
 群消息事件
 
 
-## _class_ `FriendMessage`
+##  _class_ `FriendMessage`
 
 基类：`nonebot.adapters.mirai.event.message.MessageEvent`
 
 好友消息事件
 
 
-## _class_ `TempMessage`
+##  _class_ `TempMessage`
 
 基类：`nonebot.adapters.mirai.event.message.MessageEvent`
 
 临时会话消息事件
 
 
-## _class_ `NoticeEvent`
+##  _class_ `NoticeEvent`
 
 基类：`nonebot.adapters.mirai.event.base.Event`
 
 通知事件基类
 
 
-## _class_ `MuteEvent`
+##  _class_ `MuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 禁言类事件基类
 
 
-## _class_ `BotMuteEvent`
+##  _class_ `BotMuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MuteEvent`
 
 Bot被禁言
 
 
-## _class_ `BotUnmuteEvent`
+##  _class_ `BotUnmuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MuteEvent`
 
 Bot被取消禁言
 
 
-## _class_ `MemberMuteEvent`
+##  _class_ `MemberMuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MuteEvent`
 
 群成员被禁言事件（该成员不是Bot）
 
 
-## _class_ `MemberUnmuteEvent`
+##  _class_ `MemberUnmuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MuteEvent`
 
 群成员被取消禁言事件（该成员不是Bot）
 
 
-## _class_ `BotJoinGroupEvent`
+##  _class_ `BotJoinGroupEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 Bot加入了一个新群
 
 
-## _class_ `BotLeaveEventActive`
+##  _class_ `BotLeaveEventActive`
 
 基类：`nonebot.adapters.mirai.event.notice.BotJoinGroupEvent`
 
 Bot主动退出一个群
 
 
-## _class_ `BotLeaveEventKick`
+##  _class_ `BotLeaveEventKick`
 
 基类：`nonebot.adapters.mirai.event.notice.BotJoinGroupEvent`
 
 Bot被踢出一个群
 
 
-## _class_ `MemberJoinEvent`
+##  _class_ `MemberJoinEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 新人入群的事件
 
 
-## _class_ `MemberLeaveEventKick`
+##  _class_ `MemberLeaveEventKick`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberJoinEvent`
 
 成员被踢出群（该成员不是Bot）
 
 
-## _class_ `MemberLeaveEventQuit`
+##  _class_ `MemberLeaveEventQuit`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberJoinEvent`
 
 成员主动离群（该成员不是Bot）
 
 
-## _class_ `FriendRecallEvent`
+##  _class_ `FriendRecallEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 好友消息撤回
 
 
-## _class_ `GroupRecallEvent`
+##  _class_ `GroupRecallEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.FriendRecallEvent`
 
 群消息撤回
 
 
-## _class_ `GroupStateChangeEvent`
+##  _class_ `GroupStateChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 群变化事件基类
 
 
-## _class_ `GroupNameChangeEvent`
+##  _class_ `GroupNameChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 某个群名改变
 
 
-## _class_ `GroupEntranceAnnouncementChangeEvent`
+##  _class_ `GroupEntranceAnnouncementChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 某群入群公告改变
 
 
-## _class_ `GroupMuteAllEvent`
+##  _class_ `GroupMuteAllEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 全员禁言
 
 
-## _class_ `GroupAllowAnonymousChatEvent`
+##  _class_ `GroupAllowAnonymousChatEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 匿名聊天
 
 
-## _class_ `GroupAllowConfessTalkEvent`
+##  _class_ `GroupAllowConfessTalkEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 坦白说
 
 
-## _class_ `GroupAllowMemberInviteEvent`
+##  _class_ `GroupAllowMemberInviteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 允许群员邀请好友加群
 
 
-## _class_ `MemberStateChangeEvent`
+##  _class_ `MemberStateChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 群成员变化事件基类
 
 
-## _class_ `MemberCardChangeEvent`
+##  _class_ `MemberCardChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberStateChangeEvent`
 
 群名片改动
 
 
-## _class_ `MemberSpecialTitleChangeEvent`
+##  _class_ `MemberSpecialTitleChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberStateChangeEvent`
 
 群头衔改动（只有群主有操作限权）
 
 
-## _class_ `BotGroupPermissionChangeEvent`
+##  _class_ `BotGroupPermissionChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberStateChangeEvent`
 
 Bot在群里的权限被改变
 
 
-## _class_ `MemberPermissionChangeEvent`
+##  _class_ `MemberPermissionChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberStateChangeEvent`
 
 成员权限改变的事件（该成员不是Bot）
 
 
-## _class_ `RequestEvent`
+##  _class_ `RequestEvent`
 
 基类：`nonebot.adapters.mirai.event.base.Event`
 
 请求事件基类
 
 
-## _class_ `NewFriendRequestEvent`
+##  _class_ `NewFriendRequestEvent`
 
 基类：`nonebot.adapters.mirai.event.request.RequestEvent`
 
 添加好友申请
 
 
-### _async_ `approve(bot)`
+###  _async_ `approve(bot)`
 
 
 * **说明**
@@ -1295,7 +1295,7 @@ Bot在群里的权限被改变
 
 
 
-### _async_ `reject(bot, operate=1, message='')`
+###  _async_ `reject(bot, operate=1, message='')`
 
 
 * **说明**
@@ -1323,14 +1323,14 @@ Bot在群里的权限被改变
 
 
 
-## _class_ `MemberJoinRequestEvent`
+##  _class_ `MemberJoinRequestEvent`
 
 基类：`nonebot.adapters.mirai.event.request.RequestEvent`
 
 用户入群申请（Bot需要有管理员权限）
 
 
-### _async_ `approve(bot)`
+###  _async_ `approve(bot)`
 
 
 * **说明**
@@ -1346,7 +1346,7 @@ Bot在群里的权限被改变
 
 
 
-### _async_ `reject(bot, operate=1, message='')`
+###  _async_ `reject(bot, operate=1, message='')`
 
 
 * **说明**
@@ -1380,14 +1380,14 @@ Bot在群里的权限被改变
 
 
 
-## _class_ `BotInvitedJoinGroupRequestEvent`
+##  _class_ `BotInvitedJoinGroupRequestEvent`
 
 基类：`nonebot.adapters.mirai.event.request.RequestEvent`
 
 Bot被邀请入群申请
 
 
-### _async_ `approve(bot)`
+###  _async_ `approve(bot)`
 
 
 * **说明**
@@ -1403,7 +1403,7 @@ Bot被邀请入群申请
 
 
 
-### _async_ `reject(bot, message='')`
+###  _async_ `reject(bot, message='')`
 
 
 * **说明**
@@ -1424,7 +1424,7 @@ Bot被邀请入群申请
 # NoneBot.adapters.mirai.event.base 模块
 
 
-## _class_ `UserPermission`
+##  _class_ `UserPermission`
 
 基类：`str`, `enum.Enum`
 
@@ -1444,7 +1444,7 @@ Bot被邀请入群申请
 
 
 
-## _class_ `NudgeSubjectKind`
+##  _class_ `NudgeSubjectKind`
 
 基类：`str`, `enum.Enum`
 
@@ -1461,14 +1461,14 @@ Bot被邀请入群申请
 
 
 
-## _class_ `Event`
+##  _class_ `Event`
 
 基类：[`nonebot.adapters._event.Event`](README.md#nonebot.adapters._event.Event)
 
 mirai-api-http 协议事件，字段与 mirai-api-http 一致。各事件字段参考 [mirai-api-http 事件类型](https://github.com/project-mirai/mirai-api-http/blob/master/docs/EventType.md)
 
 
-### _classmethod_ `new(data)`
+###  _classmethod_ `new(data)`
 
 此事件类的工厂函数, 能够通过事件数据选择合适的子类进行序列化
 
@@ -1480,42 +1480,42 @@ mirai-api-http 协议事件，字段与 mirai-api-http 一致。各事件字段�
 # NoneBot.adapters.mirai.event.meta 模块
 
 
-## _class_ `MetaEvent`
+##  _class_ `MetaEvent`
 
 基类：`nonebot.adapters.mirai.event.base.Event`
 
 元事件基类
 
 
-## _class_ `BotOnlineEvent`
+##  _class_ `BotOnlineEvent`
 
 基类：`nonebot.adapters.mirai.event.meta.MetaEvent`
 
 Bot登录成功
 
 
-## _class_ `BotOfflineEventActive`
+##  _class_ `BotOfflineEventActive`
 
 基类：`nonebot.adapters.mirai.event.meta.MetaEvent`
 
 Bot主动离线
 
 
-## _class_ `BotOfflineEventForce`
+##  _class_ `BotOfflineEventForce`
 
 基类：`nonebot.adapters.mirai.event.meta.MetaEvent`
 
 Bot被挤下线
 
 
-## _class_ `BotOfflineEventDropped`
+##  _class_ `BotOfflineEventDropped`
 
 基类：`nonebot.adapters.mirai.event.meta.MetaEvent`
 
 Bot被服务器断开或因网络问题而掉线
 
 
-## _class_ `BotReloginEvent`
+##  _class_ `BotReloginEvent`
 
 基类：`nonebot.adapters.mirai.event.meta.MetaEvent`
 
@@ -1524,28 +1524,28 @@ Bot主动重新登录
 # NoneBot.adapters.mirai.event.message 模块
 
 
-## _class_ `MessageEvent`
+##  _class_ `MessageEvent`
 
 基类：`nonebot.adapters.mirai.event.base.Event`
 
 消息事件基类
 
 
-## _class_ `GroupMessage`
+##  _class_ `GroupMessage`
 
 基类：`nonebot.adapters.mirai.event.message.MessageEvent`
 
 群消息事件
 
 
-## _class_ `FriendMessage`
+##  _class_ `FriendMessage`
 
 基类：`nonebot.adapters.mirai.event.message.MessageEvent`
 
 好友消息事件
 
 
-## _class_ `TempMessage`
+##  _class_ `TempMessage`
 
 基类：`nonebot.adapters.mirai.event.message.MessageEvent`
 
@@ -1554,189 +1554,189 @@ Bot主动重新登录
 # NoneBot.adapters.mirai.event.notice 模块
 
 
-## _class_ `NoticeEvent`
+##  _class_ `NoticeEvent`
 
 基类：`nonebot.adapters.mirai.event.base.Event`
 
 通知事件基类
 
 
-## _class_ `MuteEvent`
+##  _class_ `MuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 禁言类事件基类
 
 
-## _class_ `BotMuteEvent`
+##  _class_ `BotMuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MuteEvent`
 
 Bot被禁言
 
 
-## _class_ `BotUnmuteEvent`
+##  _class_ `BotUnmuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MuteEvent`
 
 Bot被取消禁言
 
 
-## _class_ `MemberMuteEvent`
+##  _class_ `MemberMuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MuteEvent`
 
 群成员被禁言事件（该成员不是Bot）
 
 
-## _class_ `MemberUnmuteEvent`
+##  _class_ `MemberUnmuteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MuteEvent`
 
 群成员被取消禁言事件（该成员不是Bot）
 
 
-## _class_ `BotJoinGroupEvent`
+##  _class_ `BotJoinGroupEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 Bot加入了一个新群
 
 
-## _class_ `BotLeaveEventActive`
+##  _class_ `BotLeaveEventActive`
 
 基类：`nonebot.adapters.mirai.event.notice.BotJoinGroupEvent`
 
 Bot主动退出一个群
 
 
-## _class_ `BotLeaveEventKick`
+##  _class_ `BotLeaveEventKick`
 
 基类：`nonebot.adapters.mirai.event.notice.BotJoinGroupEvent`
 
 Bot被踢出一个群
 
 
-## _class_ `MemberJoinEvent`
+##  _class_ `MemberJoinEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 新人入群的事件
 
 
-## _class_ `MemberLeaveEventKick`
+##  _class_ `MemberLeaveEventKick`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberJoinEvent`
 
 成员被踢出群（该成员不是Bot）
 
 
-## _class_ `MemberLeaveEventQuit`
+##  _class_ `MemberLeaveEventQuit`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberJoinEvent`
 
 成员主动离群（该成员不是Bot）
 
 
-## _class_ `FriendRecallEvent`
+##  _class_ `FriendRecallEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 好友消息撤回
 
 
-## _class_ `GroupRecallEvent`
+##  _class_ `GroupRecallEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.FriendRecallEvent`
 
 群消息撤回
 
 
-## _class_ `GroupStateChangeEvent`
+##  _class_ `GroupStateChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 群变化事件基类
 
 
-## _class_ `GroupNameChangeEvent`
+##  _class_ `GroupNameChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 某个群名改变
 
 
-## _class_ `GroupEntranceAnnouncementChangeEvent`
+##  _class_ `GroupEntranceAnnouncementChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 某群入群公告改变
 
 
-## _class_ `GroupMuteAllEvent`
+##  _class_ `GroupMuteAllEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 全员禁言
 
 
-## _class_ `GroupAllowAnonymousChatEvent`
+##  _class_ `GroupAllowAnonymousChatEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 匿名聊天
 
 
-## _class_ `GroupAllowConfessTalkEvent`
+##  _class_ `GroupAllowConfessTalkEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 坦白说
 
 
-## _class_ `GroupAllowMemberInviteEvent`
+##  _class_ `GroupAllowMemberInviteEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.GroupStateChangeEvent`
 
 允许群员邀请好友加群
 
 
-## _class_ `MemberStateChangeEvent`
+##  _class_ `MemberStateChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
 群成员变化事件基类
 
 
-## _class_ `MemberCardChangeEvent`
+##  _class_ `MemberCardChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberStateChangeEvent`
 
 群名片改动
 
 
-## _class_ `MemberSpecialTitleChangeEvent`
+##  _class_ `MemberSpecialTitleChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberStateChangeEvent`
 
 群头衔改动（只有群主有操作限权）
 
 
-## _class_ `BotGroupPermissionChangeEvent`
+##  _class_ `BotGroupPermissionChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberStateChangeEvent`
 
 Bot在群里的权限被改变
 
 
-## _class_ `MemberPermissionChangeEvent`
+##  _class_ `MemberPermissionChangeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.MemberStateChangeEvent`
 
 成员权限改变的事件（该成员不是Bot）
 
 
-## _class_ `NudgeEvent`
+##  _class_ `NudgeEvent`
 
 基类：`nonebot.adapters.mirai.event.notice.NoticeEvent`
 
@@ -1745,21 +1745,21 @@ Bot在群里的权限被改变
 # NoneBot.adapters.mirai.event.request 模块
 
 
-## _class_ `RequestEvent`
+##  _class_ `RequestEvent`
 
 基类：`nonebot.adapters.mirai.event.base.Event`
 
 请求事件基类
 
 
-## _class_ `NewFriendRequestEvent`
+##  _class_ `NewFriendRequestEvent`
 
 基类：`nonebot.adapters.mirai.event.request.RequestEvent`
 
 添加好友申请
 
 
-### _async_ `approve(bot)`
+###  _async_ `approve(bot)`
 
 
 * **说明**
@@ -1775,7 +1775,7 @@ Bot在群里的权限被改变
 
 
 
-### _async_ `reject(bot, operate=1, message='')`
+###  _async_ `reject(bot, operate=1, message='')`
 
 
 * **说明**
@@ -1803,14 +1803,14 @@ Bot在群里的权限被改变
 
 
 
-## _class_ `MemberJoinRequestEvent`
+##  _class_ `MemberJoinRequestEvent`
 
 基类：`nonebot.adapters.mirai.event.request.RequestEvent`
 
 用户入群申请（Bot需要有管理员权限）
 
 
-### _async_ `approve(bot)`
+###  _async_ `approve(bot)`
 
 
 * **说明**
@@ -1826,7 +1826,7 @@ Bot在群里的权限被改变
 
 
 
-### _async_ `reject(bot, operate=1, message='')`
+###  _async_ `reject(bot, operate=1, message='')`
 
 
 * **说明**
@@ -1860,14 +1860,14 @@ Bot在群里的权限被改变
 
 
 
-## _class_ `BotInvitedJoinGroupRequestEvent`
+##  _class_ `BotInvitedJoinGroupRequestEvent`
 
 基类：`nonebot.adapters.mirai.event.request.RequestEvent`
 
 Bot被邀请入群申请
 
 
-### _async_ `approve(bot)`
+###  _async_ `approve(bot)`
 
 
 * **说明**
@@ -1883,7 +1883,7 @@ Bot被邀请入群申请
 
 
 
-### _async_ `reject(bot, message='')`
+###  _async_ `reject(bot, message='')`
 
 
 * **说明**

@@ -14,7 +14,7 @@ sidebarDepth: 0
 :::
 
 
-## _class_ `Rule`
+##  _class_ `Rule`
 
 基类：`object`
 
@@ -62,7 +62,7 @@ Rule(async_function, run_sync(sync_function))
 
 
 
-### _async_ `__call__(bot, event, state)`
+###  _async_ `__call__(bot, event, state)`
 
 
 * **说明**
@@ -170,7 +170,7 @@ Rule(async_function, run_sync(sync_function))
 :::
 
 
-## _class_ `ArgumentParser`
+##  _class_ `ArgumentParser`
 
 基类：`argparse.ArgumentParser`
 

@@ -11,7 +11,7 @@ sidebarDepth: 0
 这些异常并非所有需要用户处理，在 NoneBot 内部运行时被捕获，并进行对应操作。
 
 
-## _exception_ `NoneBotException`
+##  _exception_ `NoneBotException`
 
 基类：`Exception`
 
@@ -22,7 +22,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `IgnoredException`
+##  _exception_ `IgnoredException`
 
 基类：`nonebot.exception.NoneBotException`
 
@@ -40,7 +40,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `ParserExit`
+##  _exception_ `ParserExit`
 
 基类：`nonebot.exception.NoneBotException`
 
@@ -61,7 +61,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `PausedException`
+##  _exception_ `PausedException`
 
 基类：`nonebot.exception.NoneBotException`
 
@@ -79,7 +79,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `RejectedException`
+##  _exception_ `RejectedException`
 
 基类：`nonebot.exception.NoneBotException`
 
@@ -97,7 +97,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `FinishedException`
+##  _exception_ `FinishedException`
 
 基类：`nonebot.exception.NoneBotException`
 
@@ -115,7 +115,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `StopPropagation`
+##  _exception_ `StopPropagation`
 
 基类：`nonebot.exception.NoneBotException`
 
@@ -132,7 +132,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `AdapterException`
+##  _exception_ `AdapterException`
 
 基类：`nonebot.exception.NoneBotException`
 
@@ -150,7 +150,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `NoLogException`
+##  _exception_ `NoLogException`
 
 基类：`Exception`
 
@@ -161,7 +161,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `ApiNotAvailable`
+##  _exception_ `ApiNotAvailable`
 
 基类：`nonebot.exception.AdapterException`
 
@@ -172,7 +172,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `NetworkError`
+##  _exception_ `NetworkError`
 
 基类：`nonebot.exception.AdapterException`
 
@@ -183,7 +183,7 @@ sidebarDepth: 0
 
 
 
-## _exception_ `ActionFailed`
+##  _exception_ `ActionFailed`
 
 基类：`nonebot.exception.AdapterException`
 
